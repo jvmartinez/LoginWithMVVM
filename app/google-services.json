@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "120410553511",
+    "firebase_url": "https://loginwithwvvm.firebaseio.com",
+    "project_id": "loginwithwvvm",
+    "storage_bucket": "loginwithwvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120410553511:android:23df78bd28c3f31ffbaf82",
+        "android_client_info": {
+          "package_name": "com.jvmartinez.loginwithmvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120410553511-cuggcm7u0m89291ch7pb6j4o02du2fk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzBoGhUP29bsBGQj8kJP6orfo4x6LJKh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120410553511-cuggcm7u0m89291ch7pb6j4o02du2fk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

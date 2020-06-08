@@ -10,4 +10,9 @@
     <string name="lbl_user">User</string>
     <string name="lbl_password">Password</string>
     <string name="lbl_recovery">Recover password</string>
+    <!--Custom View Dialog-->
+    <string name="btn_ok">Ok</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="lbl_title">Title</string>
+    <string name="lbl_message">Message</string>
 </resources>

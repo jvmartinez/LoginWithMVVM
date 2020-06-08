@@ -11,4 +11,9 @@
     <string name="lbl_password">Contraseña</string>
     <string name="lbl_recovery">Recuperar contraseña</string>
     <string name="title_error">Error</string>
+    <!--Custom View Dialog-->
+    <string name="btn_ok">Aceptar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="lbl_title">Titulo</string>
+    <string name="lbl_message">Mensaje</string>
 </resources>
