@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Login-->
+    <string name="message_error_user_and_password">Usuario o contraseña inválidos. Por favor intenta de nuevo.</string>
+    <string name="message_error_password_length">La contraseña tiene que tener una longitud mas 6 caracteres</string>
+    <string name="title_login">Inicio de Sesión </string>
+    <string name="app_name">My Taste</string>
+    <string name="lbl_sign_up">Registro</string>
+    <string name="lbl_login">Iniciar sesión</string>
+    <string name="lbl_user">Usuario</string>
+    <string name="lbl_password">Contraseña</string>
+    <string name="lbl_recovery">Recuperar contraseña</string>
+    <string name="title_error">Error</string>
+</resources>

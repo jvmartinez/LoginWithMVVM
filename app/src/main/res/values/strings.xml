@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">LoginWithMVVM</string>
+    <string name="app_name">Login</string>
+    <!--Login-->
+    <string name="message_error_user_and_password">User or password invalid. Please try again.</string>
+    <string name="message_error_password_length">The password must have a length plus 6 characters</string>
+    <string name="title_login">Login</string>
+    <string name="title_error">Error</string>
+    <string name="lbl_sign_up">Register</string>
+    <string name="lbl_login">Log In</string>
+    <string name="lbl_user">User</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_recovery">Recover password</string>
 </resources>
