@@ -14,7 +14,7 @@ class LoginViewModel(private val loginInteractor: LoginInteractor, private val r
     LoginInteractor.OnLoginFinishedListener {
 
     private val loginLiveData: MutableLiveData<ScreenState<LoginState>> = MutableLiveData()
-    private var username: String = ""
+    private var email: String = ""
     private var password: String = ""
     private val loginStateButton: MutableLiveData<Boolean> = MutableLiveData()
     private val disposables = CompositeDisposable()
@@ -24,11 +24,11 @@ class LoginViewModel(private val loginInteractor: LoginInteractor, private val r
 
     fun onLoginClicked() {
         loginLiveData.value = ScreenState.Loading
-        loginInteractor.login(username, password, this)
+        loginInteractor.login(email, password, this)
     }
 
     override fun onUserError() {
-        loginLiveData.value = ScreenState.Render(LoginState.WrongUser)
+        loginLiveData.value = ScreenState.Render(LoginState.WrongEmail)
     }
 
     override fun onPasswordLengthError() {
@@ -36,25 +36,25 @@ class LoginViewModel(private val loginInteractor: LoginInteractor, private val r
     }
 
     override fun onSuccess() {
-        val disposable = repository.login(username, password)
+        val disposable = repository.login(email, password)
             .subscribeOn(Schedulers.io())
             .subscribeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 loginLiveData.value = ScreenState.Render(LoginState.Success)
             }, {
-                loginLiveData.value = ScreenState.Render(LoginState.WrongUser)
+                loginLiveData.value = ScreenState.Render(LoginState.WrongEmail)
             })
-
+        disposables.add(disposable)
     }
 
     fun userTextChange(toString: String) {
-        username = toString
-        setLoginStateButton(!username.isEmpty() && !password.isEmpty())
+        email = toString
+        setLoginStateButton(email.isNotEmpty() && password.isNotEmpty())
     }
 
     fun passwordTextChange(toString: String) {
         password = toString
-        setLoginStateButton(!username.isEmpty() && !password.isEmpty())
+        setLoginStateButton(email.isNotEmpty() && password.isNotEmpty())
     }
 
     fun getLoginStateButton(): LiveData<Boolean> {

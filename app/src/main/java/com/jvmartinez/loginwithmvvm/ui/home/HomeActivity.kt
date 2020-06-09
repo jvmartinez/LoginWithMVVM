@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.jvmartinez.loginwithmvvm.R
 import com.jvmartinez.loginwithmvvm.core.data.firebase.FirebaseSource
 import com.jvmartinez.loginwithmvvm.core.data.repository.UserRepository
@@ -19,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-        viewModel = ViewModelProviders.of(
+        viewModel = ViewModelProvider(
             this,
             HomeViewModelFactory(UserRepository(FirebaseSource()))
         ).get(HomeViewModel::class.java)

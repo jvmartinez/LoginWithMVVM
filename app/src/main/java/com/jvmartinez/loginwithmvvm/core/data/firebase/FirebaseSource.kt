@@ -22,4 +22,15 @@ class FirebaseSource {
     fun currentUser() = firebaseAuth.currentUser
 
     fun logout() = firebaseAuth.signOut()
+
+    fun register(email: String, password: String) = Completable.create { emitter ->
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+            if (!emitter.isDisposed) {
+                if (it.isSuccessful)
+                    emitter.onComplete()
+                else
+                    emitter.onError(it.exception!!)
+            }
+        }
+    }
 }

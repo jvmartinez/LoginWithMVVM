@@ -7,7 +7,7 @@
     <string name="title_error">Error</string>
     <string name="lbl_sign_up">Register</string>
     <string name="lbl_login">Log In</string>
-    <string name="lbl_user">User</string>
+    <string name="lbl_user">E-mail</string>
     <string name="lbl_password">Password</string>
     <string name="lbl_recovery">Recover password</string>
     <!--Custom View Dialog-->
@@ -17,4 +17,6 @@
     <string name="lbl_message">Message</string>
     <string name="btn_logout">Exit</string>
     <string name="info_user">Information user</string>
+    <string name="message_error_email_register">E-mail invalid</string>
+    <string name="lbl_register">Register</string>
 </resources>

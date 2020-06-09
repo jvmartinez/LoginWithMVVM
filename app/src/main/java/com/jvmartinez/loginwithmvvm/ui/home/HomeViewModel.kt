@@ -1,6 +1,5 @@
 package com.jvmartinez.loginwithmvvm.ui.home
 
-import android.view.View
 import androidx.lifecycle.ViewModel
 import com.jvmartinez.loginwithmvvm.core.data.repository.UserRepository
 

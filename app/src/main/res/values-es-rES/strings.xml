@@ -7,7 +7,7 @@
     <string name="title_login">Inicio de Sesión </string>
     <string name="lbl_sign_up">Registro</string>
     <string name="lbl_login">Iniciar sesión</string>
-    <string name="lbl_user">Usuario</string>
+    <string name="lbl_user">Correo electronico</string>
     <string name="lbl_password">Contraseña</string>
     <string name="lbl_recovery">Recuperar contraseña</string>
     <string name="title_error">Error</string>
@@ -18,4 +18,7 @@
     <string name="lbl_message">Mensaje</string>
     <string name="btn_logout">Salir</string>
     <string name="info_user">Información del usuario</string>
+
+    <string name="message_error_email_register">E-mail invalido</string>
+    <string name="lbl_register">Registro</string>
 </resources>

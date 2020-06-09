@@ -1,7 +1,5 @@
 package com.jvmartinez.loginwithmvvm.ui.login
 
-import com.jvmartinez.loginwithmvvm.util.Utilities
-
 class LoginInteractor {
     interface OnLoginFinishedListener {
         fun onUserError()
