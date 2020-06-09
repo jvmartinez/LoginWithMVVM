@@ -23,6 +23,7 @@ class LoginViewModel(private val loginInteractor: LoginInteractor, private val r
         get() = loginLiveData
 
     fun onLoginClicked() {
+        loginLiveData.value = ScreenState.Loading
         loginInteractor.login(username, password, this)
     }
 

@@ -15,4 +15,6 @@
     <string name="btn_cancel">Cancel</string>
     <string name="lbl_title">Title</string>
     <string name="lbl_message">Message</string>
+    <string name="btn_logout">Exit</string>
+    <string name="info_user">Information user</string>
 </resources>

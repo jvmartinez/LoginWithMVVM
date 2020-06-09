@@ -1,10 +1,12 @@
 package com.jvmartinez.loginwithmvvm.ui.login
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -57,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun onLoginClicked() {
+        hideKeyboard()
         viewModel.onLoginClicked()
     }
 
@@ -116,5 +119,14 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setOnClickListener { onLoginClicked() }
         txt_user.addTextChangedListener(textChangedUser())
         txt_password.addTextChangedListener(textChangedPassword())
+    }
+
+    fun hideKeyboard() {
+        val view = currentFocus
+        if (view != null) {
+            val imm =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view.windowToken, 0)
+        }
     }
 }

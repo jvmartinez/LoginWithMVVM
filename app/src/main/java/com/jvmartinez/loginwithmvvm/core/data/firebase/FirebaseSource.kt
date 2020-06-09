@@ -20,4 +20,6 @@ class FirebaseSource {
     }
 
     fun currentUser() = firebaseAuth.currentUser
+
+    fun logout() = firebaseAuth.signOut()
 }
